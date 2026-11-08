@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<!-- filename: index.html --> 
+<html lang="en">
+    <head>
+        <title>Home - W4A</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="./universal_stylesheet.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+
+        <!-- header and navigation bar -->
+        <header>
+            <nav class="navbar-container">
+                <ul class="navbar-menu"> 
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./separating_html_and_css_content.html">Separating HTML &amp; CSS Content</a></li>
+                    <li><a href="./css_selectors.html">CSS Selectors</a></li>
+                    <li><a href="./hierarchical_styles.html">CSS Hierarchical Styles</a></li>
+                </ul>
+                <div class="navbar-container-right">
+                    <h1 class="site-title"><span>W</span>eb<span>4A</span>ll</h1>
+                </div>
+            </nav>
+        </header>
+
+        <main id="page-top">
+            <!-- banner and title -->
+            <section id="home-page-banner">
+                <h2>An Introduction to Web Development</h2>
+            </section>
+
+            <!-- 3 Layer Model Description --> 
+            <section id="three-layer-model-wrapper">
+                <h2 class="section-heading" id="three-layer-heading">
+                    The 3 Layer Model
+                </h2>
+                <p id="three-layer-definition">
+                    The 3 Layer Model is a useful structure, separating content, presentation and behaviour, that webpages can follow to ensure a good end-user experience.
+                    That's all a bit of a mouthful though so, just for a minute, let's think of a website like a stack of 3 pancakes that all each make each other better. 
+                    3 pancakes are a lot more impressive and interesting than just 1 sad lonely pancake!
+                </p>
+                <section class="three-layer-model-grid-container">
+                        <img src="./images/pancake-stack.jpg" alt="pancake stack"/>
+                    <div>
+                        The first pancake (or layer) is the Content layer. This provides the basic structure and base content for our website for example text, images and video. 
+                        The content layer is controlled by HTML.
+                    </div>
+                    <div>
+                        The second pancake (or layer) is the Presentation layer. 
+                        CSS controls the presentation layer and adds styling, layout and other aesthetically pleasing properties to the already existing HTML content. 
+                        CSS can be applied at the top of a HTML file, inline within an opening HTML tag itself or as an externally linked stylesheet. 
+                    </div>
+                    <div>
+                        The third pancake (or layer) is the Behaviour layer. This provides interactivity to our website and is implemented using a language called JavaScript.
+                        This allows users to interact with a website by way of buttons and keyprompts etc.
+                    </div>
+                </section>
+            </section>
+
+            <!-- Language Cards --> 
+             <section id="language-wrapper">
+                <h2 class="section-heading" id="web-dev-heading">
+                    The 3 Languages of Web Development
+                </h2>
+                
+                <section id="language-container">
+                    <div class="language">
+                        <h3>
+                            HTML
+                        </h3>
+                        <hr> 
+                        <h4>
+                            The Content Layer
+                        </h4>
+                        <img src="./images/html-logo.png" alt="HTML Logo"/>
+                        <p class="first">
+                            HTML stands for HyperText Markup Language. It's the standard markup language that's used to structure the content of a website. The language was invented by Sir Tim Berners-Lee 
+                            (the creator of the World Wide Web!) between 1989 and 1991 while working at CERN in Switzerland.
+                        </p>
+                        <p>
+                            HTML controls the content layer of a webpage via the use of tags (think of labels!). When content is put between a HTML opening tag and a closing one, this can now be referred to as a complete HTML element.
+                            Most (but not all!) HTML elements have an opening and a closing tag.
+                        </p>
+                        <p>
+                            Use of effective and descriptive HTML tags adds semantic meaning. When we refer to HTML code as having 'semantic meaning', we mean that the HTML tags in use provide a description within themselves of 
+                            how the page is structured, without need for overly excessive use of comments. HTML files are saved with the file suffix ".html".
+                        </p>
+                        <p>
+                            <strong>NB. HTML files are also commonly referred to as documents.</strong>
+                        </p>
+                        <p>
+                            Below are some common HTML tags:
+                        </p>
+                        <ul>
+                            <li><span class="inline-important">html</span> - The root element of an HTML file</li>
+                            <li><span class="inline-important">head</span> - Contains metadata (data describing data) about the HTML file it is within</li>
+                            <li><span class="inline-important">body</span> - Contains the content of a webpage displayed to the end-user</li>
+                            <li><span class="inline-important">div</span> - A division tag. A non semantic and generic block level element</li>
+                            <li><span class="inline-important">p</span> - A paragraph tag. Tends to contain text content</li>
+                            <li><span class="inline-important">a</span> - An anchor tag. This is used to denote and style an interactive link</li>
+                            <li><span class="inline-important">section</span> - Similar to a div tag but carries more semantic meaning and tends to group related content together</li>
+                            <li><span class="inline-important">ul &amp; ol</span> - Unordered List, Ordered List</li>
+                            <li><span class="inline-important">li</span> - A list item within an ol or ul element</li>
+                            <li><span class="inline-important">input</span> - Used to denote and style an interactive button</li>
+                            <li><span class="inline-important">span</span> - Used to apply unique styling to a smaller inline portion of usually text</li>
+                        </ul>
+                    </div>
+                    <div class="language">
+                        <h3>
+                            CSS
+                        </h3>
+                        <hr>
+                        <h4>
+                            The Presentation Layer
+                        </h4>
+                        <img src="./images/css-logo.png" alt="CSS Logo"/>
+                        <p class="first">
+                            CSS stands for Cascading Style Sheets. It is a stylesheet language and it's purpose in life is to describe how the content of a HTML file should look aesthetically. 
+                            CSS targets HTML via the use of selectors. Selectors are the individual HTML elements that are targeted for styling to be applied to them. 
+                            There are many different ways to target <strong><a href="css_selectors.html" class="intext-link" target="_blank">CSS selectors</a></strong> that you can read further about on the page.
+                        </p>
+                        <p>
+                            Styling is applied to these selectors via declarations stipulating properties and their values. The syntax is as follows. 
+                            Property: Value; (eg. color: blue;). The "color" is the property and "blue" is the value assigned to it. Together these form to make a declaration.
+                        </p>
+                        <p>
+                            Multiple declarations to style one selector within "{}"is referred to as a declaration block. A declaration block with a selector associated with it at the top is called a ruleset.
+                            CSS Rulesets can be written in a variety of places. They can be put at the top of the HTML file they apply to in a style tag within the head element, 
+                            inline within the exact tag they are to applied to or an an external stylesheet that is linked at the top of the page within a link tag within the head element. 
+                            Applying CSS styles inline is generally more messy and makes files less readable, therefore it is a good rule of thumb to try avoid using inline CSS if possible!
+                        </p>
+                        <p>
+                            CSS uses a style hierarchy to trickle down or "cascade" (like in the name!) styles in an appropriate ordered manner.
+                            <strong><a href="hierarchical_styles.html" class="intext-link" target="_blank" >CSS style hierarchy</a></strong> consists of 3 principles those being 
+                            specificity, inheritance and the cascade which all come into play in different ways in order to determine which styles are applied where, when and in which order or precedence. 
+                            CSS files are saved with the ".css" file suffix.
+                        </p>
+                    </div>
+                    <div class="language">
+                        <h3>
+                            JavaScript
+                        </h3>
+                        <hr>
+                        <h4>
+                            The Behaviour Layer
+                        </h4>
+                        <img src="./images/js-logo.png" alt="JavaScript Logo"/>
+                        <p class="first">
+                            JavaScript (JS) is an interpreted high-level programming language that is used to to make webpages dynamic and interactive. 
+                            It is the only programming language of the 3 mentioned on this website that is "Turing complete".
+                        </p>
+                        <p>
+                            A Turing complete language is able to simulate the Turing machine (built by Alan Turing) and can perform any Turing computable function. Turing computable functions include conditional branching (if, else, else if statements), 
+                            iteration and recursion (loops evaluated against a Boolean expression) and the ability to read, modify and store data while a program runs.
+                        </p>
+                        <p>
+                            Within web development, JavaScript can be used to modify the Document Object Model (DOM). 
+                            The DOM is the representation of a HTML file structured in the form of a tree. 
+                            It's a programmatic logical tree structure that sets out clearly exactly which elements are children, parents and siblings of each other. 
+                            Through JavaScript amending the DOM, interactivity can be added in real time to the website. 
+                            This can be in the form of the website responding to button clicks, keyboard prompts and updating its own webpage content in real time without requiring a full page refresh.
+                        </p>
+                        <p>
+                            JavaScript, as it's a Turing complete (and therfore quite broadly useful) language, is used much further afield than simply front-end webpage development. 
+                            Node.js is a JavaScript runtime that when used allows JavaScript code to be run outside the browser. 
+                            Apart from controlling the behaviour layer of webpage JavaScript can be used for server-side scripting and can also be used to develop a variety of web-based applications and games. 
+                            JavaScript files are saved with the ".js" file suffix.
+                        </p>
+                    </div>
+                </section>
+             </section>
+
+            
+        </main>
+
+        <!-- footer code --> 
+        <footer class="page-footer">
+            <p>
+                An educational teaching aide for those learning HTML &amp; CSS || Created by Danyal Amin while studying Computing at Kingston College
+            </p>
+            <span> 
+                <a href="#page-top" class="menu-link">Back to top</a>
+            </span>
+        </footer>
+        
+    </body>
+</html>

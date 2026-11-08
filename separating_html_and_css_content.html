@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<!-- filename: separating_html_and_css_content.html -->
+<html lang="en">
+
+<head>
+    <title>Separating HTML & CSS Content - W4A</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./universal_stylesheet.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+    <!-- header and navigation bar -->
+    <header>
+        <nav class="navbar-container">
+            <ul class="navbar-menu">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./separating_html_and_css_content.html">Separating HTML &amp; CSS Content</a></li>
+                <li><a href="./css_selectors.html">CSS Selectors</a></li>
+                <li><a href="./hierarchical_styles.html">CSS Hierarchical Styles</a></li>
+            </ul>
+            <div class="navbar-container-right">
+                <h1 class="site-title"><span>W</span>eb<span>4A</span>ll</h1>
+            </div>
+        </nav>
+    </header>
+
+    <main id="page-top">
+            <section id="separating-content-page-banner">
+                <h2>Separating HTML &amp; CSS Content</h2>
+            </section>
+        <section class="selector-page-main-wrapper">
+            <h2 class="section-heading">
+                The Purposes Of Separating HTML &amp; CSS Content
+            </h2>
+            <p class="main-para-text">
+                CSS declarations can be applied to a HTML document in 3 different ways. CSS can be included inline, internally, or
+                externally. Generally it is a good rule of thumb to add CSS styling externally wherever possible. This increases the
+                readability of your files. It also allows multiple HTML documents to take advantage of one single set of CSS
+                declarations. This improves workflow and code maintainability. Below we'll delve deeper into the various ways CSS
+                styling can be applied to HTML along with some examples.
+            </p>
+            <section class="description-grid">
+                <section class="description-card">
+                    <h3>
+                        Inline CSS
+                    </h3>
+                    <p>
+                        CSS can be applied to HTML via writing the property: value; declarations "inline". This means to write all the
+                        declarations directly within the opening (or self-closing) tag of the HTML element that you want to apply the styling
+                        to. This can be helpful for small changes or overrides in places when using a generalised class selector. This is
+                        because inline styling has a higher specificity than a class selector and therefore will work in the case of changing a
+                        rule that you want to override just in 1 or 2 places.
+                    </p>
+                    <p>
+                        However, generally it's advisable to avoid overly relying on applying CSS via the inline method if possible. Firstly
+                        this is because, oftentimes you may end up having to re-type various declarations multiple times. In this case it would
+                        be easier to declare a class ruleset that can be reused multiple times. Secondly, inline CSS can greatly increase the
+                        amount of text in a small area within a file. This can serve to make code more messy, less readable and more difficult
+                        to maintain and potentially debug. Click below to see an example of some HTML with all of its CSS applied inline.
+                    </p>
+                    <a class="codespace-button" href="https://onecompiler.com/html/458mjj3ka" target="_blank" rel="noopener noreferrer">Try it in a codespace!</a>
+                </section>
+                <pre class="code-block">
+                    <code>
+<span class="red">HTML Code</span>
+
+&lt;p style=&quot;color: red; font-weight: bold;&quot;&gt;
+    This is some bold red text.
+    The CSS has been added inline
+    in the opening p tag.
+&lt;/p&gt;
+
+                    </code>
+                </pre>
+                <pre class="code-block">
+                    <code>
+<span class="red">HTML Code</span>
+
+&lt;head&gt;
+    &lt;style&gt;
+        p
+        {
+            color: red;
+            font-weight: bold
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;p&gt; 
+        This is some red, bold text.
+        The CSS has been written
+        internally within the style
+        element.
+    &lt;/p&gt;
+&lt;/body&gt;
+                    </code>
+                </pre>
+                <section class="description-card">
+                    <h3>
+                        Internal CSS
+                    </h3>
+                    <p>
+                        CCSS styling can be applied to HTML "internally". The term "internally" refers to the fact that the CSS declarations
+                        are all written within the very HTML file that they are intended to apply to. Writing CSS declarations for each HTML
+                        file can become quite longwinded and inefficient though. Entire websites are made up of many individual HTML files.
+                        Applying CSS styling internally may result in you having to re-type the same or very similar declarations over and over
+                        just so that they can be used within more than one HTML document.
+                    </p>
+                    <p>
+                        Furthermore, while internal CSS is neater than writing CSS inline within HTML tags, adding many CSS declarations
+                        internally will result in some very long
+                        HTML files which can become somewhat hard to read and confusing. The harder code is to read and understand, the harder
+                        it will be to maintain and debug! Click below for an example of CSS being exclusively applied internally.
+                    </p>
+                    <a class="codespace-button" href="https://onecompiler.com/html/458mk7d25" target="_blank" rel="noopener noreferrer">Try it in a codespace!</a>
+                </section>
+                <section class="description-card">
+                    <h3>
+                        External CSS
+                    </h3>
+                    <p>
+                        CSS styling can be applied to HTML "externally". This is done by writing all of the CSS selectors and their relevant
+                        declaration blocks in a .css file that is outside of the HTML file it is to be applied to. To then make the contents of
+                        the .css file accessible within the HTML file, you add it via a link tag within the "head" element. The "rel" attribute
+                        stands for relationship and is set to "stylesheet" indicating the link you are adding into the file is in fact a
+                        stylesheet. The "type" attribute stipulates the type of content being linked. The value of the "type" attribute must be
+                        a valid MIME type, in our case "text/css" which stipulates the link is to a file of text which is of the css type. The
+                        "href" attribute stands for hypertext reference. The value of the "href" attribute is the URL (Uniform Resource Locator)
+                        of the CSS file that you want to add. Oftentimes this will be prefixed with "./" indicating that the URL you are
+                        providing is at the end of a relative path not an absolute path.
+                    </p>
+                    <p>
+                        Quick Definitions:
+                        <span class="break"><span class="inline-important">MIME</span> - These used to be known as <span class="inline-important">Multipurpose Internet Mail
+                            Extension Types</span> but are now known simply as <span class="inline-important">Media Types</span>. They indicate the nature and format of a document or file.
+                            Most commonly written in the form "type/subtype". </span>
+                        <span class="break"><span class="inline-important">Relative path</span> - A path to a file that begins from your current
+                            working directory</span>
+                        <span class="break"><span class="inline-important">Absolute path</span> - A path to a file that begins from the root of
+                            a filesystem directory</span>
+                    </p>
+                    <p>
+                        Applying CSS externally is generally the most recommended way to apply CSS styling to a HTML file. This is because
+                        separating the content and the formatting keeps files neater and more organised. This increased the readability of the
+                        code being written. This makes it easier to maintain and debug especially across larger codebases that may have more
+                        than one engineer/developer working within them. Furthermore external CSS can easily be linked across many different
+                        HTML files which allows multiple files access to use and reuse class rulesets to ensure uniform, professional styling
+                        across the webpage. Click below for an example of CSS being exclusively applied externally.
+
+                    </p>
+                    <a class="codespace-button" href="https://onecompiler.com/html/458mmhh29" target="_blank" rel="noopener noreferrer">Try it in a codespace!</a>
+                </section>
+                <pre class="code-block">
+                    <code>
+
+<span class="red">CSS Code</span>
+/* filename: style.css */
+
+p
+{
+    color: red;
+    font-weight: bold;
+}
+
+<span class="red">HTML Code</span>
+
+&lt;head&gt;
+    &lt;link rel=&quot;stylesheet&quot; 
+    type=&quot;text/css&quot; 
+    href=&quot;./style.css&quot;/&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;p&gt; 
+        This is some red, bold text
+        The CSS has been written externally
+        and added via a link tag in the head 
+    &lt;/p&gt;
+&lt;/body&gt;
+                    </code>
+                </pre>
+            </section>
+        </section>
+    </main>
+
+     <!-- footer code --> 
+        <footer class="page-footer">
+            <p>
+                An educational teaching aide for those learning HTML &amp; CSS || Created by Danyal Amin while studying Computing at Kingston College
+            </p>
+            <span> 
+                <a href="#page-top" class="menu-link">Back to top</a>
+            </span>
+        </footer>
+        
+    </body>
+</html>

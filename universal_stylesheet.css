@@ -1,0 +1,756 @@
+/* stylesheet for Danyal Amin's HTMl Assignment Website */
+/* filename: universal_stylesheet.css */
+
+*
+{
+    box-sizing: border-box;
+}
+
+body
+{
+    margin: 0px;
+    padding: 0px;
+    background-color: var(--main-page-background); 
+}
+
+/* global variables */
+:root
+{
+    --nav-footer-height: 80px;
+    --nav-footer-background: #00ffae;
+    --main-page-background: #ccffef;
+    --header-footer-font: "System UI", sans-serif;
+    --main-text-font: "Trebuchet MS", sans-serif;
+    --intext-link-color: red;
+    --description-card-background-colour: rgba(255, 255, 255, 0.5);
+    --code-block-background-colour: #00ffae7f;
+
+}
+
+::selection
+{
+    background-color: rgba(255, 255, 0, 0.5);
+    color: red;
+}
+
+:focus-visible
+{
+    color: red;
+    background-color: rgba(255, 255, 0, 1);
+}
+
+/* nav bar and menu rulesets */
+
+header
+{
+    position: sticky;
+    top: 0px;
+}
+
+[id="page-top"], 
+[id="specificity-heading"], 
+[id="inheritance-heading"],
+[id="cascade-heading"]
+{
+    scroll-margin-top: calc(var(--nav-footer-height) + 20px);
+}
+
+.navbar-container
+{
+    position: relative;
+    top: 0px;
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    height: var(--nav-footer-height);
+    background-color: var(--nav-footer-background);
+    justify-content: start;
+    padding: 0px;
+}
+
+.navbar-container-right
+{
+    display: inline-flex;
+    flex-direction: row;
+    height: 100%;
+    width: 25%;
+    justify-content: end;
+    align-items: center;
+}
+
+.site-title
+{
+    font-size: 2rem;
+    font-family: "Rockwell", serif;
+    padding-right: 40px;
+    margin: 0px;
+}
+
+.site-title span
+{
+    font-weight: 800;
+    font-size: 1.2em;
+}
+
+.navbar-menu
+{
+    display: inline-flex;
+    height: 100%;
+    width: 75%;
+    margin: 0px;
+    padding-left: 40px;
+    justify-content: start;
+    align-items: center;
+    list-style-type: none;
+}
+
+.navbar-menu li
+{
+    display: inline-flex;;
+    font-family: var(--header-footer-font);
+    height: 100%;
+    align-items: center;
+    transition: background-color 250ms ease 0s;
+}
+
+.navbar-menu li a
+{
+    align-items: center;
+    font-size: 20px;
+    margin: 0px 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.navbar-menu li a:visited
+{
+    text-decoration: none;
+    color: black;
+}
+
+.navbar-menu li:hover
+{
+  text-decoration: underline;
+  background-color: white;
+  color: red;
+}
+
+.navbar-menu li:hover a
+{
+    color: red;
+}
+
+/* footer ruleset */
+
+.page-footer
+{
+    width: 100%;
+    height: var(--nav-footer-height);
+    background-color: var(--nav-footer-background);
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-footer p
+{
+    display: inline-block;
+    font-family: var(--header-footer-font);
+    font-size: 1rem;
+    padding-top: 25px;
+    margin: 0px;
+    padding-left: 20px;
+    font-weight: bold;
+}
+
+.page-footer span a
+{
+    display: inline-block;
+    font-family: var(--header-footer-font);
+    font-weight: bold; 
+    font-size: 1rem;
+    margin-top: 25px;
+    margin-right: 35px;
+}
+
+/* NB: SOME CLASS RULESETS ARE USED ACROSS MULTIPLE PAGES */
+/* COMMENTING BELOW IS AN INDICATIVE ORDERING OF RULESETS FOR EACH PAGE NOT 100% DEFINITIVE */
+
+/* INDEX.HTML */
+/* main body content ruleset */
+
+.menu-link
+{
+    text-decoration: none;
+    color: black;
+}
+
+.menu-link:visited
+{
+    text-decoration: none;
+    color: black;
+}
+
+.menu-link:hover
+{
+    text-decoration: underline;
+    color: red;
+}
+
+.intext-link
+{
+    color: var(--intext-link-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.intext-link:visited
+{
+    color: var(--intext-link-color);
+    text-decoration: none;
+}
+
+.intext-link:hover
+{
+    text-decoration: underline;
+}
+
+.intext-link::selection, .intext-link:focus
+{
+    color: blue;
+    background-color: yellow;
+}
+
+#home-page-banner
+{
+    background-image: url("./images/home_page_banner.avif");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 250px;
+    width: 100%;
+    margin: 30px auto 30px auto;
+    z-index: -2;
+    position: relative;
+}
+
+#home-page-banner h2
+{
+    display: inline;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    z-index: 5;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 35px;
+    padding: 10px;
+    font-family: var(--main-text-font);
+    margin: 0px;
+    text-align: center;
+}
+
+/* 3 Layer Model rulesets */
+
+#three-layer-model-wrapper
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.section-heading
+{
+    font-size: 30px;
+    font-family: var(--main-text-font);
+    text-align: center;
+}
+
+#three-layer-heading
+{
+    margin-top: 0px;
+}
+
+#three-layer-definition
+{
+    font-family: var(--main-text-font);
+    text-align: left;
+    align-self: center;
+    width: 900px;
+    margin-top: 0px;
+    font-size: 18px;
+    max-width: 100%;
+}
+
+.three-layer-model-grid-container
+{
+    display: grid;
+    grid-template: 300px 300px / 300px 300px;
+    justify-content: center;
+    row-gap: 25px;
+    column-gap: 90px;
+    overflow: auto;
+}
+
+.three-layer-model-grid-container img
+{
+    height: 300px;
+    width: auto;
+    border: 1px solid white;
+    border-radius: 20px;
+}
+
+.three-layer-model-grid-container div
+{
+    border-radius: 20px;
+    border: 1px solid white;
+    background-color: white;
+    font-size: 18px;
+    font-family: var(--main-text-font);
+    padding: 10px;
+}
+
+/* 3 Web Development Languages ruleses */
+
+#language-wrapper
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+#web-dev-heading
+{
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+#language-container
+{
+    display: flex;
+    margin: 25px 50px;
+    flex-direction: row;
+    justify-content: space-around; 
+    overflow: auto;
+}
+
+.language
+{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 20px;
+    width: 300px;
+}
+
+.language h3
+{
+    font-family: var(--main-text-font);
+    font-weight: bold; 
+    text-align: center;
+    margin-bottom: 0px;
+    font-size: 25px;
+}
+
+.language h4
+{
+    font-family: var(--main-text-font);
+    font-weight: bold; 
+    text-align: center;
+    margin-top: 0px;
+    font-size: 20px;
+}
+
+.language img
+{
+    height: 200px;
+    width: auto;
+    padding: 0px;
+}
+
+.language hr
+{
+    margin: 10px 0px;
+    width: 90%
+}
+
+.language p
+{
+    font-family: var(--main-text-font);
+    text-align: left;
+    margin: 10px 0px;
+    padding: 0px 15px;
+    min-width: 300px;
+    font-size: 18px;
+}
+
+.language p.first
+{
+    font-family: var(--main-text-font);
+    text-align: left;
+    margin: 16px 0px 0px 0px;
+    padding: 0px 15px;
+    min-width: 300px;
+}
+
+.language ul
+{
+    font-family: var(--main-text-font);
+    text-align: left;
+    align-self: start;
+    margin: 10px 15px;
+    padding: 0px 15px;
+    font-size: 18px;
+}
+
+.inline-important
+{
+    font-weight: bold;
+    text-decoration: underline red solid 2px
+}
+
+/* CSS_SELECTORS.HTML */
+
+/* main body content ruleset for css_selectors.html */
+
+.selector-page-main-wrapper
+{
+    display: flex;
+    width: 75%;
+    margin: 30px auto 15px auto;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.main-para-text
+{
+    font-family: var(--main-text-font);
+    text-align: center;
+    margin: 10px 0px;
+    min-width: 40%;
+    font-size: 18px;
+}
+
+.selector-para-text
+{
+   font-family: var(--main-text-font);
+    text-align: left;
+    margin: 10px 0px;
+    padding: 0px 15px;
+    min-width: 300px;
+    font-size: 18px;
+}
+
+#basic-css-syntax-pic
+{
+    margin-top: 15px;
+}
+
+.section-subhead
+{
+    font-size: 25px;
+    font-family: var(--main-text-font);
+    text-align: center;
+}
+
+.description-grid
+{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-auto-flow: row;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0px;
+    row-gap: 25px;
+    margin-top: 20px;
+}
+
+.selector-img
+{   
+    width: 50%;
+    height: auto;
+}
+
+.description-card
+{
+    background-color: var(--description-card-background-colour);
+    width: 80%;
+    height: 100%;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    overflow: auto;
+    border-radius: 10px;
+}
+
+.description-card h3
+{
+    font-size: 22px;
+    font-family: var(--main-text-font);
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+.description-card p
+{
+    font-size: 18px;
+    font-family: var(--main-text-font);
+    text-align: left;
+    padding: 0px 15px;
+}
+
+.description-card ul
+{
+    font-size: 18px;
+    font-family: var(--main-text-font);
+    text-align: left;
+    align-self: flex-start;
+    margin: 18px 15px;
+}
+
+.codespace-button
+{
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: var(--main-text-font);
+    background-color: blue;
+    border: 1px solid blue;
+    border-radius: 5px;
+    transition: all 250ms ease 0s;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.codespace-button:hover
+{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+.codespace-button::selection
+{
+    background-color: yellow;
+}
+
+.codespace-button:focus-visible
+{
+    background-color: yellow;
+    color: red;
+}
+
+.code-block
+{
+    height: 100%;
+    width: 80%;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--code-block-background-colour);
+    font-size: 18px;
+    font-weight: bold;
+    overflow: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+}
+
+.red
+{
+    color: red;
+}
+
+/* HIERARCHICAL_STYLES.HTML */
+
+/* Main body content rulesets for hierarchical_styles.html */
+
+.style-page-wrapper
+{
+    display: flex;
+    width: 80%;
+    margin: 30px auto 15px auto;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.horizontal-flex-container
+{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.style-page-description-card-white
+{
+    background-color: var(--description-card-background-colour);
+    width: 25%;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    overflow: auto;
+    border: 1px solid var(--description-card-background-colour);
+    border-radius: 10px;
+}
+
+.style-page-description-card-white h3
+{
+    font-size: 22px;
+    font-family: var(--main-text-font);
+    text-align: center;
+    font-weight: bold;
+    margin: 15px 0px;
+}
+
+.style-page-description-card-white p
+{
+    font-size: 18px;
+    font-family: var(--main-text-font);
+    text-align: left;
+    padding: 0px 15px;
+}
+
+.style-page-description-card-white ol
+{
+    font-size: 18px;
+    font-family: var(--main-text-font);
+    text-align: left;
+    align-self: flex-start;
+    margin: 18px 15px;
+}
+
+.style-page-description-card-green
+{
+    width: 25%;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    background-color: var(--code-block-background-colour);
+    font-size: 18px;
+    overflow: auto;
+    border: 1px solid var(--code-block-background-colour);
+    border-radius: 10px;
+}
+
+.style-page-description-card-green h3
+{
+    font-size: 22px;
+    font-family: var(--main-text-font);
+    text-align: center;
+    font-weight: bold;
+    margin: 15px 0px;
+}
+
+.style-page-description-card-green p
+{
+    font-size: 18px;
+    font-family: var(--main-text-font);
+    text-align: left;
+    padding: 0px 15px;
+}
+
+.style-page-description-card-green ol
+{
+    font-size: 18px;
+    font-family: var(--main-text-font);
+    text-align: left;
+    align-self: flex-start;
+    margin: 18px 15px;
+}
+
+#css-specificity-table-pic
+{
+    width: 75%;
+    height: auto;
+    margin: 20px 0px;
+}
+
+#specificity-arrow-img
+{
+    width: 35%;
+    height: auto;
+    align-self: center;
+}
+
+.style-page-wrapper hr
+{
+    width: 85%;
+    margin: 10px auto;
+}
+
+.justify-content-center-override
+{
+    justify-content: center;
+}
+
+.cascade-card-width-override
+{
+    width: 30%;
+}
+
+.break
+{
+    display: block;
+}
+
+/* SEPARATING_HTML_AND_CSS_CONTENT.HTML */
+
+/* Main body content rulesets for separating_html_and_css_content.html */
+
+#separating-content-page-banner
+{
+    background-image: url("./images/separating_content_page_banner.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 250px;
+    width: 100%;
+    margin: 30px auto 30px auto;
+    z-index: -2;
+    position: relative;
+}
+
+#separating-content-page-banner h2
+{
+    display: inline;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    z-index: 5;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 35px;
+    padding: 10px;
+    font-family: var(--main-text-font);
+    margin: 0px;
+    text-align: center;
+}
+
+/* media queries for index.html */
+
+@media only screen and (max-width: 880px)
+{
+  .navbar-container-right
+  {
+    display: flex;
+  }  
+}
