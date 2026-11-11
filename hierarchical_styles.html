@@ -20,6 +20,7 @@
                 <li><a href="./separating_html_and_css_content.html">Separating HTML &amp; CSS Content</a></li>
                 <li><a href="./css_selectors.html">CSS Selectors</a></li>
                 <li><a href="./hierarchical_styles.html">CSS Hierarchical Styles</a></li>
+                <li><a href="./references.html">References</a></li>
             </ul>
             <div class="navbar-container-right">
                 <h1 class="site-title"><span>W</span>eb<span>4A</span>ll</h1>
@@ -34,9 +35,8 @@
                 CSS Style Hierarchy
             </h2>
             <p class="main-para-text">
-                The CSS style hierarchy is the system which is used what style rule to apply to HTML elements when there
-                are multiple
-                style rules in effect, applying different styling to the same element and its properties.
+                The CSS style hierarchy is the system which is used to determine which style rule to apply to HTML elements when there
+                are multiple style rules in effect, applying different styling to the same element and its properties.
                 The 3 principles of the CSS style hierarchy are <strong><a href="#specificity-heading" class="intext-link">specificity</a></strong>,
                 <strong><a href="#inheritance-heading" class="intext-link">inheritance</a></strong> and <strong><a href="#cascade-heading" class="intext-link">the cascade</a></strong>.
             </p>
@@ -49,7 +49,7 @@
                         Specificity
                     </h3>
                     <p>
-                        Specificity, within CSS, is the principle that that decides which style rules take precedence
+                        Specificity, within CSS, is the principle that decides which style rules take precedence
                         over other style rules.
                         Resultantly this greatly influences the overall effect of CSS depending on the HTML structure of
                         the document.
@@ -72,7 +72,7 @@
                         Cascade
                     </h3>
                     <p>
-                        This makes up the 'C' in CSS! The cascade is the algorithm decides how to go about finding the
+                        This makes up the 'C' in CSS! The cascade is the that algorithm decides how to go about finding the
                         exact style rule that should be applied to each HTML element within a document.
                         The cascade algorithm follows a few steps which we'll explore a little further down below.
                     </p>
@@ -112,8 +112,7 @@
             <img id="css-specificity-table-pic" alt="specificity weight table"
                 src="./images/css_specificity_table.jpg" />
             <p class="main-para-text">
-                CSS specificity can actual be boiled down to numbers. The specificity weight notation goes as follows
-                "X-Y-Z".
+                CSS specificity can actual be boiled down to numbers. The specificity weight notation is presented in the form "X-Y-Z".
                 X represents the number of ID selectors, Y represents the number of pseudo classes,
                 class and attribute selectors and Z represents the number of pseudo element and element selectors.
                 The selector that has the highest number in the left-most column of the "X-Y-Z" weight notation takes
@@ -126,7 +125,10 @@
                         In the example to the right we have 2 style rules that are controlling foreground colour.
                         The universal selector is directly targeting all elements and setting the foreground colour to
                         red.
-                        This ruleset would have a specificity weight of 0-0-0. Their is also an element selector
+                        This ruleset would have a specificity weight of 0-0-0.
+                    </p>
+                    <p>
+                        There is also an element selector
                         stipulating that the
                         foreground colour should be blue for div elements only. This ruleset would have a specificity
                         weight of 0-0-1 as it contains 1 element selector.
@@ -169,11 +171,13 @@ div
                         In the example to the left we have 2 style rules. The class "big-bold-yellow" sets a yellow
                         background and a large, bold font.
                         The "important-stuff" ID sets the font to be even larger and to have a pink background.
+                    </p>
+                    <p>
                         The specificity weight of the "big-bold-yellow" selector is 0-1-0 due to it being a class
                         selector.
                         The specificity weight of the "important-stuff" selector is 1-0-0 due to it being an ID
                         selector.
-                        Resultantly therefore the "important-stuff" declaration block "wins" and has its style rules
+                        Resultantly, the "important-stuff" declaration block "wins" and has its style rules
                         applied taking precedence over the class selector.
                     </p>
                     <a class="codespace-button" href="https://onecompiler.com/html/458kfapfh" target="_blank" rel="noopener noreferrer">Try it in a codespace!</a>
@@ -205,7 +209,10 @@ div
                         will have the relevant
                         style rules applied. All div elements will also have all of it's relevant style rules applied
                         unless targeted by a
-                        ruleset of higher specificity, such as the class selector to the right. However what if we have
+                        ruleset of higher specificity, such as the class selector above.
+                    </p>
+                    <p>
+                        However what if we have
                         p elements within the
                         document nested inside elements with these style rules applied to them? There are no specific
                         style rules written for p
@@ -247,21 +254,23 @@ div
                     </pre>
                 <section class="description-card justify-content-center-override">
                     <p>
-                        In the example to the left we have declaration blocks for both h3 and div elements. We know,
+                        In the example to the left we have declaration blocks for both h3 and div elements. We now know,
                         from our example above,
-                        what is likely to happen if we were to place a p element within a div or a h1. The p element
+                        what is likely to happen if we were to place a p element within a div or a h3 element. The p element
                         will inherit the style of
                         it's parent element as it has no style rules here that have been written for it. However what
                         would happen if the p
-                        element was just placed on its own within the document, not within any other element? Well
-                        firstly, all elements that
+                        element was just placed on its own within the document, not within any other element?
+                    </p>
+                    <p>
+                        Well firstly, all elements that
                         are displayed on the screen have "body" as the parent element so any styles overarchingly being
                         applied to the body will
                         be inherited. Here however we have no style rules that have been written for the body element.
                         Resultantly the p element
                         will still be displayed on the screen however it will inherit the default styles that have been
                         written for the browser
-                        which the webpage is being viewed in. explain stuff to the left
+                        which the webpage is being viewed in.
                     </p>
                     <a class="codespace-button" href="https://onecompiler.com/html/458knsaec" target="_blank" rel="noopener noreferrer">Try it in a codespace!</a>
                 </section>
@@ -292,7 +301,7 @@ div
                         in the cascade order due to higher specificity or other factors.
                     </p>
                     <p>
-                        Style Origins <span class="break">(Highest Importance --&gt; Lowest Importance):</span>
+                        <strong>Style Origins <span class="break">(Highest Importance --&gt; Lowest Importance):</span></strong>
                     </p>
                     <ol>
                         <li><span class="inline-important">User Stylesheet</span> (with "!important")</li>
@@ -311,7 +320,10 @@ div
                     <p>
                         In the case that an element has 2 conflicting styles that have both the same origin and level of
                         importance the cascade algorithm moves forward to
-                        its second metric of consideration. This is specificity. It will use the principle of
+                        its second metric of consideration.
+                    </p>
+                    <p>
+                        This is specificity. It will use the principle of
                         specificity and the corresponding weight notation in order to apply the
                         style with the highest specificity to the element being looked at.
                     </p>
@@ -322,16 +334,15 @@ div
                     </h3>
                     <p>
                         In the case that style declarations have the same origin, level of importance and specificity,
-                        the source order is then considered. The styles are applied in order of appearance. In the case of author stylesheets, the declaration written the lowest down takes precedence and is
-                        applied. There is also an order of precedence with regard to the source of the CSS that has been
-                        written.
+                        the source order is then considered. The styles are applied in order of appearance. In the case of author stylesheets,
+                        the declaration written the lowest down takes precedence and is
+                        applied. There is also an order of precedence with regard to author stylesheets.
                     </p>
                     <p>
                         If an external and internal stylesheet both have style rules of the same specificity weighting then the last rule the
                         browser reads will be applied. In other words
-                        if the &lt;style&gt; element is below the &lt;link&gt; tag then the rule within the internal CSS will be applied. However if the
-                        &lt;link&gt; tag is below the &lt;style&gt; eleement
-                        the rule within the external CSS will be applied.
+                        if the &lt;style&gt; element is below the &lt;link&gt; tag in the document then the rule within the internal CSS will be applied. However if the
+                        &lt;link&gt; tag is below the &lt;style&gt; element within the document then the rule within the external CSS will be applied.
                     </p>
                 </section>
             </section>
@@ -341,7 +352,7 @@ div
     <!-- footer code -->
     <footer class="page-footer">
         <p>
-            An educational teaching aide for those learning HTML &amp; CSS || Created by Danyal Amin while studying
+            An educational teaching aid for those learning HTML &amp; CSS || Created by Danyal Amin while studying
             Computing at Kingston College
         </p>
         <span>

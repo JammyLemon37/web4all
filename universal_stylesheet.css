@@ -13,6 +13,11 @@ body
     background-color: var(--main-page-background); 
 }
 
+body *
+{
+    /* border: 1px solid red; */
+}
+
 /* global variables */
 :root
 {
@@ -115,11 +120,15 @@ header
 
 .navbar-menu li a
 {
+    display: inline-flex;
     align-items: center;
     font-size: 20px;
-    margin: 0px 10px;
     text-decoration: none;
     color: black;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px 10px;
 }
 
 .navbar-menu li a:visited
@@ -288,7 +297,7 @@ header
 .three-layer-model-grid-container
 {
     display: grid;
-    grid-template: 300px 300px / 300px 300px;
+    grid-template: repeat(2, 300px) / repeat(2, 300px);
     justify-content: center;
     row-gap: 25px;
     column-gap: 90px;
@@ -297,7 +306,7 @@ header
 
 .three-layer-model-grid-container img
 {
-    height: 300px;
+    height: 100%;
     width: auto;
     border: 1px solid white;
     border-radius: 20px;
@@ -346,7 +355,8 @@ header
     background-color: white;
     border: 1px solid white;
     border-radius: 20px;
-    width: 300px;
+    width: 25%;
+    min-width: 300px;
 }
 
 .language h3
@@ -407,6 +417,11 @@ header
     margin: 10px 15px;
     padding: 0px 15px;
     font-size: 18px;
+    list-style-type: none;
+}
+.language li
+{
+    margin-top: 5px;
 }
 
 .inline-important
@@ -499,7 +514,7 @@ header
     font-family: var(--main-text-font);
     text-align: center;
     font-weight: bold;
-    margin-bottom: 0px;
+    margin: 20px 0px 10px 0px;
 }
 
 .description-card p
@@ -508,6 +523,7 @@ header
     font-family: var(--main-text-font);
     text-align: left;
     padding: 0px 15px;
+    margin: 10px 0px;
 }
 
 .description-card ul
@@ -517,6 +533,11 @@ header
     text-align: left;
     align-self: flex-start;
     margin: 18px 15px;
+}
+
+.description-card li
+{
+    margin-top: 5px;
 }
 
 .codespace-button
@@ -635,6 +656,11 @@ header
     margin: 18px 15px;
 }
 
+.style-page-description-card-white li
+{
+    margin-top: 5px;
+}
+
 .style-page-description-card-green
 {
     width: 25%;
@@ -673,6 +699,11 @@ header
     text-align: left;
     align-self: flex-start;
     margin: 18px 15px;
+}
+
+.style-page-description-card-green li
+{
+    margin-top: 5px;
 }
 
 #css-specificity-table-pic
@@ -745,6 +776,67 @@ header
     text-align: center;
 }
 
+/* REFERENCES.HTML */
+/* style rules for references.html */
+
+.reference-page-wrapper
+{
+    display: flex;
+    width: 75%;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--description-card-background-colour);
+    min-height: calc(100vh - (var(--nav-footer-height) * 2));
+}
+
+.reference-description-card-container
+{
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.reference-page-description-card-green
+{
+    width: 30%;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: start;
+    background-color: var(--code-block-background-colour);
+    font-size: 18px;
+    overflow: auto;
+    border: 1px solid var(--code-block-background-colour);
+    border-radius: 10px;
+    margin: 35px 0px;
+}
+
+.reference-page-description-card-green h3
+{
+    font-size: 22px;
+    font-family: var(--main-text-font);
+    text-align: center;
+    font-weight: bold;
+    margin: 15px 0px 0px 0px;
+}
+
+.reference-page-description-card-green p
+{
+    font-size: 18px;
+    font-family: var(--main-text-font);
+    text-align: center;
+    padding: 0px 15px;
+}
+
+.list-style-none-override
+{
+    list-style-type: none;
+}
+
 /* media queries for index.html */
 
 @media only screen and (max-width: 880px)
@@ -754,3 +846,4 @@ header
     display: flex;
   }  
 }
+

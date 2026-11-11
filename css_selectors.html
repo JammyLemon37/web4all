@@ -18,6 +18,7 @@
                     <li><a href="./separating_html_and_css_content.html">Separating HTML &amp; CSS Content</a></li>
                     <li><a href="./css_selectors.html">CSS Selectors</a></li>
                     <li><a href="./hierarchical_styles.html">CSS Hierarchical Styles</a></li>
+                    <li><a href="./references.html">References</a></li>
                 </ul>
                 <div class="navbar-container-right">
                     <h1 class="site-title"><span>W</span>eb<span>4A</span>ll</h1>
@@ -101,8 +102,10 @@ p
                         </h3>
                         <p>
                             The class selector targets elements based on whether the value of their class attribute matches the class attached to the CSS ruleset. 
-                            Class selectors are prefixed with a '.' and followed by the class name. 
-                            Classes provide an easy way to reuse style rules over multiple html tags by just including the CSS class name as the value to the HTML class 
+                            Class selectors are prefixed with a '.' and followed by the class name.
+                        </p>
+                        <p>
+                            Classes provide an easy way to reuse style rules over multiple html tags by just including the CSS class name as the value to the HTML "class" 
                             attribute within the intended element to be targeted. This saves us from having to copy-paste or retype the same code over and over.
                         </p>
                         <a class="codespace-button" href="https://onecompiler.com/html/458bdw5mn" target="_blank" rel="noopener noreferrer">Try it in a codespace!</a>
@@ -157,7 +160,7 @@ p
                         </p>
                         <p>
                             We can also experiment further with how we apply class selectors. For example, if we write "div .big" above the CSS declaration block, 
-                            this would target elements only within div tags that have the class attribute value of "big". 
+                            this would target elements that have the class attribute value of "big" only if they themself are within a div tag.
                             Furthermore you could also write "div.big" with no space above the CSS declaration block. 
                             This would target only div elements that have the class attribute value of "big" applied to them within their HTML tag. 
                             Feel free to have a go experimenting with some of these by using the online codespace provided for you!
@@ -278,8 +281,10 @@ section > p
                             Next Sibling Combinator
                         </h3>
                         <p>
-                            The next sibling combinator is denoted by a '+' character. This targets the element that is the next direct sibling along to the element to the left. 
-                            In our example on the right the div tag that directly follows any section tag and share the same parent element will have the background colour of blue applied to it.
+                            The next sibling combinator is denoted by a '+' character. This targets the element that is the next direct sibling
+                            along to the element to the left.
+                            In our example on the right the div tag that is a sibling and directly follows any section tag and share the same parent
+                            element will have the background colour of blue applied to it.
                         </p>
                         <a class="codespace-button" href="https://onecompiler.com/html/458d6mgft" target="_blank" rel="noopener noreferrer">Try it in a codespace!</a>
                     </section>
@@ -330,13 +335,13 @@ section ~ p
                             Interactive pseudo classes apply styling to an element based upon how a user interracts with the element on the webpage.
                         </p>
                         <ul>
-                            <li><span class="inline-important">:hover</span> - Targets an element when a user hovers their mouse over it</li>
+                            <li><span class="inline-important">:hover</span> - Targets an element when a user hovers over it</li>
                             <li><span class="inline-important">:focus</span> - Targets an element when a user selects it with their mouse or keyboard</li>
                             <li><span class="inline-important">:active</span> - Styles an interactive element when a user is in the process of clicking it. 
                                 This element is most effective when the style ruleset is written <span class="inline-important">after</span> the corresponding ":hover" ruleset
                             </li>
                             <li><span class="inline-important">:link</span> - Applies styling to a link that has not yet been visited</li>
-                            <li><span class="inline-important">:visited</span>:visited - Applies styling to a link after it has been visited</li>
+                            <li><span class="inline-important">:visited</span> - Applies styling to a link after it has been visited</li>
                         </ul>
                     </section>
                     <section class="description-card">
@@ -357,7 +362,7 @@ section ~ p
                             :hover Pseudo Class
                         </h3>
                         <p>
-                            The ":hover" pseudo class applies styling to an element only when it is hovered over by a user's mouse pointer.
+                            The ":hover" pseudo class applies styling to an element only when it is hovered over by a user.
                             This is most helpful for styling interactive links and buttons on a webpage. In our example to the right, elements with the corresponding class "big-bold-blue"
                             will become bigger, bolder and blue when hovered over by the user.
                         </p>
@@ -400,8 +405,8 @@ input.blue-button:focus
                             :first-child Pseudo Class
                         </h3>
                         <p>
-                            The ":first-child" pseudo class targets elements which are the first child descenant of their parent element. 
-                            In our example to the left p elements that are the first child within their parent element will appear bold, larger, red and with a blue underline.
+                            The ":first-child" pseudo class targets elements which are the first child descendants of their parent element. 
+                            In our example to the right p elements that are the first child within their parent element will appear bold, larger, red and with a blue underline.
                         </p>
                         <a class="codespace-button" href="https://onecompiler.com/html/458dcnu8j" target="_blank" rel="noopener noreferrer">Try it in a codespace!</a>
                     </section>
@@ -433,8 +438,8 @@ p:first-child
                             Text pseudo elements allow us to apply styling to a specific part of text based content. Below are two commonly used text pseudo elements: 
                         </p>
                         <ul>
-                            <li><span class="inline-important">::first-letter</span> - Targets the text element prefixed to "::fist-letter" and applies styling to its first letter</li>
-                            <li><span class="inline-important">::first-line</span> - Targets the text element prefixed to "::fist-line" and applies styling to its first line</li>
+                            <li><span class="inline-important">::first-letter</span> - Targets the text element prefixed to "::first-letter" and applies styling to its first letter</li>
+                            <li><span class="inline-important">::first-line</span> - Targets the text element prefixed to "::first-line" and applies styling to its first line</li>
                         </ul>
                     </section>
                     <section class="description-card">
@@ -499,8 +504,10 @@ p::first-letter
                         <p>
                             The "::before" pseudo element adds content before the element it is suffixed to. 
                             The value of the content property within the "selector::before" ruleset is what is added before the element being targeted.
+                        </p>
+                        <p>
                             In the example to the left, elements with the class "character-1" will have "Character 1: " inserted before and elements with the class "character-2" will have 
-                            "Character 2 " inserted beforehand. 
+                            "Character 2: " inserted beforehand. 
                         </p>
                         <a class="codespace-button" href="https://onecompiler.com/html/458ddbtz3" target="_blank" rel="noopener noreferrer">Try it in a codespace!</a>
                     </section>
@@ -512,9 +519,12 @@ p::first-letter
                             The "::selection" pseudo element applies styling to an element when a user highlights it using the mouse.
                             In the example to the right, "::selection" targets all elements and stipulates that when any element is highlighted the
                             background colour turns yellow
-                            and the foreground colour turns red. However we also have a conflicting style rule! When div elements are
+                            and the foreground colour turns red.
+                        </p>
+                        <p>
+                            However we also have a conflicting style rule! When div elements are
                             highlighted their background colour is set to turn green and its foreground colour, white.
-                            Resultantly, the div::selection ruleset is applied to divs here as it has higher specificity weight than "::selection".
+                            Resultantly, the div::selection ruleset is applied to divs here as it has a higher specificity weight than "::selection".
                             Feel free to learn more
                             on our <strong><a href="./hierarchical_styles.html" class="intext-link" target="_blank">CSS style hierarchy</a></strong>
                             page.
@@ -550,7 +560,7 @@ div::selection
                             ::marker Pseudo Elements
                         </h3>
                         <p>
-                            The "::marker" pseudo element applies styling to the list item markers of the element to which is is suffixed to.
+                            The "::marker" pseudo element applies styling to the list item markers of the element to which it is suffixed to.
                             In our example to the left, the list with the id "red-list" will have the markers of its li elements rendered in a large 30 pixel size and in the colour green.
                         </p>
                         <a class="codespace-button" href="https://onecompiler.com/html/458dgnpe4" target="_blank" rel="noopener noreferrer">Try it in a codespace!</a>
@@ -560,7 +570,7 @@ div::selection
                     Attribute Selectors
                 </h2>
                 <p class="main-para-text">
-                    Attribute selectors target an element that based on the presence and/or value of a specific attribute that's defined within it's HTML tag. 
+                    Attribute selectors target an element based on the value and/or presence of a specific attribute that's defined within it's HTML tag. 
                     The attribute, and possibly it's value too, is enclosed in square brackets following the name of the element it is targeting. 
                     The character 'i' can be included right before the closing square bracket in order to match attribute values in a non-case sensitive way. 
                     Conversely, 's' can be added before the closing square bracket to ensure case sensitive functionality.
@@ -569,18 +579,18 @@ div::selection
                     New Syntax Guidance: Links
                 </h3>
                 <p class="main-para-text">
-                    You may be about to see some syntax below (particularly in the codespaces) that you are not yet familiar with. Please do not panic. In particular lets quickly go through
+                    You may be about to see some syntax below (particularly in the codespaces) that you are not yet familiar with. Please don't panic! In particular lets quickly go through
                     some of the syntax you may see within the opening &lt;a&gt; (link) tags. target="_blank" tells the browser that the link that the value of the href (hypertext reference)
-                    attribute points to should be opened in a new tab. rel="noopener noreferrer" are two values to the rel (relationship) attribute that server to keep us a little safer
+                    attribute points to should be opened in a new tab. rel="noopener noreferrer" are two values to the rel (relationship) attribute that serve to keep us a little safer
                     on the web when opening links to external websites. 
                 </p>
                 <p class="main-para-text">
                     "noopener" tells the browser to disallow the webpage that we are being directed to from using a function that returns
-                    a reference to the page that opened it. This protects against potentially malicious external sites from tampering with our document or displayed windows in anyway. This 
-                    protects our users from scams or any other online harm online.
+                    a reference to the page that opened it. This protects against potentially malicious external sites from tampering with our document or displayed windows in any way. This 
+                    protects our users from scams or any other harm online.
                 </p>
                 <p class="main-para-text">
-                    "noreferrer" tells the browser to omit the Referer HTTP header when being directed to the link that "noreferrer" has been included in. This prevents from an external
+                    "noreferrer" tells the browser to omit the Referer HTTP header when being directed to the link that "noreferrer" has been included in. This prevents an external
                     website from seeing the link of the page from which the user has been directed from. This protects privacy and ensures extra safety surfing the web. In modern browsers
                     when target="_blank" is stipulated rel="noopener" tends to be automatically applied. Furthermore when rel="noreferrer" is stipulated "noopener" is also automatically applied
                     along with it. However not all users will be using a modern browser and it is generally good practice to include when directing users of our website to external links that 
@@ -597,7 +607,9 @@ div::selection
                         </h3>
                         <p>
                             This selector targets all elements that have an instance of the attribute defined within their opening HTML tag. 
-                            In our example to the right, all anchor tags with the href (hyper-text reference) attribute present will be rendered larger, bold and red. 
+                            In our example to the right, all anchor tags with the href (hyper-text reference) attribute present will be rendered larger, bold and red.
+                        </p>
+                        <p>
                             This example would essentially target all links as they all have a href value in order to direct the user to the correct destination. 
                             However a link's target tag, which specifies whether a link is to open in a new window or tab, can also be targeted here too! 
                         </p>
@@ -637,7 +649,9 @@ a[href="https://news.sky.com/uk"]
                         </h3>
                         <p>
                             This selector targets elements not based on whether an attribute is simply present or not, but also on the value of that element. 
-                            As mentioned above 'i' or 's' can be included right before the closing square bracket to trigger either a case insensitive or case sensitive search. 
+                            As mentioned above 'i' or 's' can be included right before the closing square bracket to trigger either a case insensitive or case sensitive search.
+                        </p>
+                        <p>
                             In the example on the left we see style rules for two anchor tags both with present href attributes. 
                             However we can see that one selector seems to be matching to a link that takes you to the BBC sport website, and another that takes you to the Sky news website. 
                             Resultantly these 2 links will be styled differently by the browser.
@@ -652,6 +666,8 @@ a[href="https://news.sky.com/uk"]
                             This selector targets elements with an attribute present that carries a specific value. 
                             The value can either be the exact word stipulated within quotaions in the bracket or include the word as a part of a list separated by whitespace. 
                             However it will not recognise variations of the word or the word connected by characters such as '-' and '_'. 
+                        </p>
+                        <p>
                             For example on the right is code that targets paragraph elements with the title attribute that includes the word "important". 
                             Rather ironically a p element with the title "not important" would be targeted 
                             while one with the title "very-important" or "importantest" or "veryveryimportant" would not be targeted.
@@ -760,7 +776,7 @@ p[class*="big"]
  <!-- footer code --> 
         <footer class="page-footer">
             <p>
-                An educational teaching aide for those learning HTML &amp; CSS || Created by Danyal Amin while studying Computing at Kingston College
+                An educational teaching aid for those learning HTML &amp; CSS || Created by Danyal Amin while studying Computing at Kingston College
             </p>
             <span> 
                 <a href="#page-top" class="menu-link">Back to top</a>

@@ -20,6 +20,7 @@
                 <li><a href="./separating_html_and_css_content.html">Separating HTML &amp; CSS Content</a></li>
                 <li><a href="./css_selectors.html">CSS Selectors</a></li>
                 <li><a href="./hierarchical_styles.html">CSS Hierarchical Styles</a></li>
+                <li><a href="./references.html">References</a></li>
             </ul>
             <div class="navbar-container-right">
                 <h1 class="site-title"><span>W</span>eb<span>4A</span>ll</h1>
@@ -39,7 +40,7 @@
                 CSS declarations can be applied to a HTML document in 3 different ways. CSS can be included inline, internally, or
                 externally. Generally it is a good rule of thumb to add CSS styling externally wherever possible. This increases the
                 readability of your files. It also allows multiple HTML documents to take advantage of one single set of CSS
-                declarations. This improves workflow and code maintainability. Below we'll delve deeper into the various ways CSS
+                declarations. This ensures an efficient workflow and increases code maintainability and readability. Below we'll delve deeper into the various ways CSS
                 styling can be applied to HTML along with some examples.
             </p>
             <section class="description-grid">
@@ -48,7 +49,7 @@
                         Inline CSS
                     </h3>
                     <p>
-                        CSS can be applied to HTML via writing the property: value; declarations "inline". This means to write all the
+                        CSS can be applied to HTML via writing the "property: value;" declarations "inline". This means to write all the
                         declarations directly within the opening (or self-closing) tag of the HTML element that you want to apply the styling
                         to. This can be helpful for small changes or overrides in places when using a generalised class selector. This is
                         because inline styling has a higher specificity than a class selector and therefore will work in the case of changing a
@@ -104,7 +105,7 @@
                         Internal CSS
                     </h3>
                     <p>
-                        CCSS styling can be applied to HTML "internally". The term "internally" refers to the fact that the CSS declarations
+                        CSS styling can be applied to HTML "internally". The term "internally" refers to the fact that the CSS declarations
                         are all written within the very HTML file that they are intended to apply to. Writing CSS declarations for each HTML
                         file can become quite longwinded and inefficient though. Entire websites are made up of many individual HTML files.
                         Applying CSS styling internally may result in you having to re-type the same or very similar declarations over and over
@@ -125,24 +126,37 @@
                     <p>
                         CSS styling can be applied to HTML "externally". This is done by writing all of the CSS selectors and their relevant
                         declaration blocks in a .css file that is outside of the HTML file it is to be applied to. To then make the contents of
-                        the .css file accessible within the HTML file, you add it via a link tag within the "head" element. The "rel" attribute
+                        the .css file accessible within the HTML file, you add it via a link tag within the "head" element.
+                    </p>
+                    <p>
+                        The "rel" attribute
                         stands for relationship and is set to "stylesheet" indicating the link you are adding into the file is in fact a
                         stylesheet. The "type" attribute stipulates the type of content being linked. The value of the "type" attribute must be
-                        a valid MIME type, in our case "text/css" which stipulates the link is to a file of text which is of the css type. The
+                        a valid MIME type, in our case "text/css". This stipulates the link is to a file of text which is of the css type. The
                         "href" attribute stands for hypertext reference. The value of the "href" attribute is the URL (Uniform Resource Locator)
                         of the CSS file that you want to add. Oftentimes this will be prefixed with "./" indicating that the URL you are
                         providing is at the end of a relative path not an absolute path.
                     </p>
                     <p>
-                        Quick Definitions:
-                        <span class="break"><span class="inline-important">MIME</span> - These used to be known as <span class="inline-important">Multipurpose Internet Mail
-                            Extension Types</span> but are now known simply as <span class="inline-important">Media Types</span>. They indicate the nature and format of a document or file.
-                            Most commonly written in the form "type/subtype". </span>
-                        <span class="break"><span class="inline-important">Relative path</span> - A path to a file that begins from your current
-                            working directory</span>
-                        <span class="break"><span class="inline-important">Absolute path</span> - A path to a file that begins from the root of
-                            a filesystem directory</span>
+                        <strong>Some Relevant Definitions:</strong>
                     </p>
+                    <ul class="list-style-none-override">
+                        <li>
+                            <span class="inline-important">MIME</span> - These used to be known as <span class="inline-important">Multipurpose Internet Mail
+                            Extension Types</span> but are now known simply as <span class="inline-important">Media Types</span>. They indicate the nature and format of a document or file.
+                            Most commonly written in the form "type/subtype".
+                        </li>
+                        <li>
+                            <span class="inline-important">Relative path</span> - A path to a file that begins from the current file you are referencing the link from.    
+                        </li>
+                        <li>
+                            <span class="inline-important">Absolute path</span> - A path to a file that begins from the root of
+                            a filesystem directory.
+                        </li>
+                        <li>
+                            <span class="inline-important">URL</span> - A Uniform Resource Locator is the address of a unique resource either on the internet or locally (on your computer)
+                        </li>
+                    </ul>
                     <p>
                         Applying CSS externally is generally the most recommended way to apply CSS styling to a HTML file. This is because
                         separating the content and the formatting keeps files neater and more organised. This increased the readability of the
@@ -190,7 +204,7 @@ p
      <!-- footer code --> 
         <footer class="page-footer">
             <p>
-                An educational teaching aide for those learning HTML &amp; CSS || Created by Danyal Amin while studying Computing at Kingston College
+                An educational teaching aid for those learning HTML &amp; CSS || Created by Danyal Amin while studying Computing at Kingston College
             </p>
             <span> 
                 <a href="#page-top" class="menu-link">Back to top</a>
