@@ -609,6 +609,11 @@ header
     color: red;
 }
 
+.bigger-code-text
+{
+    font-size: 22px;
+}
+
 /* HIERARCHICAL_STYLES.HTML */
 
 /* Main body content rulesets for hierarchical_styles.html */

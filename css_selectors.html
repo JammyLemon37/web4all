@@ -72,6 +72,8 @@
                         <a class="codespace-button" href="https://onecompiler.com/html/458bcynvq" target="_blank" rel="noopener noreferrer">Try it in a codespace!</a>
                     </section>
                     <pre class="code-block"><code>
+<span class="bigger-code-text">The Element Selector</span>
+
 p
 {
     text-align: center;
@@ -79,6 +81,8 @@ p
 }
                     </code></pre>
                     <pre class="code-block"><code>
+<span class="bigger-code-text">The ID Selector</span>
+                    
 #webpage-title
 {
     background-color: pink;
@@ -113,6 +117,8 @@ p
                     </section>
                     <pre class="code-block">
                         <code>
+<span class="bigger-code-text">The Class Selector</span>
+
 <span class="red">CSS Code</span>
 
 .big-bold-green
@@ -131,6 +137,9 @@ p
                     </pre>
                     <pre class="code-block">
                         <code>
+<span class="bigger-code-text">The Class Selector</span>
+<span class="bigger-code-text">(Multiple Classes)</span>
+
 <span class="red">CSS Code</span>
 
 .big
@@ -152,7 +161,7 @@ p
                     </pre>
                     <section class="description-card">
                         <h3>
-                            The Class Selector (2 Classes)
+                            The Class Selector <span class="break">(Multiple Classes)</span>
                         </h3>
                         <p>
                             We can actually expand on simply just selecting an element based on the value of its class attribute. 
@@ -189,6 +198,8 @@ p
                     </section>
                     <pre class="code-block">
                         <code>
+<span class="bigger-code-text">The Grouping Selector</span>
+
 div, p, h1
 {
     color: green;
@@ -197,6 +208,8 @@ div, p, h1
                     </pre>
                     <pre class="code-block">
                         <code>
+<span class="bigger-code-text">The Universal Selector</span>
+
 *
 {
     color: red;
@@ -219,7 +232,7 @@ body
                             The universal selector should be employed very carefully as, if used carelessly it can result in unexpected behaviours with regard to styling.
                         </p>
                         <p>
-                            In the example shown we have the universal selector targeting all elements and applying the foreground colour red to them. 
+                            In the example shown, we have the universal selector targeting all elements and applying the foreground colour red to them. 
                             We also have a ruleset for the entire body tag stating that the foreground colour should be blue. Lets now imagine within the body we have a paragraph element. 
                             Normally, unless directly styled otherwise, the paragraph element would inherit the foreground colour blue from it's parent element, the body. 
                             However in this case, the paragraph element would actually appear red. 
@@ -244,12 +257,14 @@ body
                         <p>
                             The descendant combinator is denoted by a space character. It is used to target all right-side elements that are placed within the left-side elements. 
                             We can more simply refer to the right-side element as a descendant of the left-side element. 
-                            In our example to the right the foreground colour blue will be applied to all paragraph tags that lie within (are descendants of) a section tag. 
+                            In the example provided, the foreground colour blue will be applied to all paragraph tags that lie within (are descendants of) a section tag. 
                         </p>
                         <a class="codespace-button" href="https://onecompiler.com/html/458cznw92" target="_blank" rel="noopener noreferrer">Try it in a codespace!</a>
                     </section>
                     <pre class="code-block">
                         <code>
+<span class="bigger-code-text">Descendant Combinator</span>
+
 section p
 {
     color: blue;
@@ -258,6 +273,8 @@ section p
                     </pre>
                     <pre class="code-block">
                         <code>
+<span class="bigger-code-text">Child Combinator</span>
+
 section > p
 {
     color: red;
@@ -291,6 +308,8 @@ section > p
                     </section>
                     <pre class="code-block">
                         <code>
+<span class="bigger-code-text">Next Sibling Combinator</span>
+
 section + div
 {
     background-color: yellow;
@@ -299,6 +318,8 @@ section + div
                     </pre>
                     <pre class="code-block">
                         <code>
+<span class="bigger-code-text">Subsequent Sibling Combinator</span>
+
 section ~ p
 {
     color: blue;
@@ -308,12 +329,12 @@ section ~ p
                     </pre>
                     <section class="description-card">
                         <h3>
-                            Subsequent-Sibling Combinator
+                            Subsequent Sibling Combinator
                         </h3>
                         <p>
                             The subsequent sibling combinator is denoted by a '~' character. 
                             This is used to target all right-side elements that follow and are direct siblings of the element on the left. 
-                            In our example here all p elements that are direct siblings, share the same parent element and follow the section tag will be rendered bold and blue.
+                            In our example, all p elements that are direct siblings, share the same parent element and follow the section tag will be rendered bold and blue.
                         </p>
                         <a class="codespace-button" href="https://onecompiler.com/html/458d79cjq" target="_blank" rel="noopener noreferrer">Try it in a codespace!</a>
                     </section>
@@ -371,6 +392,8 @@ section ~ p
                     </section>
                     <pre class="code-block">
                         <code>
+<span class="bigger-code-text">:hover Pseudo Class</span>
+
 .big-bold-blue:hover
 {
     font-weight: bold;
@@ -381,6 +404,8 @@ section ~ p
                     </pre>
                     <pre class="code-block">
                         <code>
+<span class="bigger-code-text">:focus Pseudo Class</span>
+
 input.blue-button:focus
 {
     background-color: LightSkyBlue;
@@ -413,6 +438,8 @@ input.blue-button:focus
                     </section>
                     <pre class="code-block">
                         <code>
+<span class="bigger-code-text">:first-child Pseudo Class</span>
+
 p:first-child
 {
     font-weight: bold;
@@ -471,6 +498,8 @@ p:first-child
                     </section>
                     <pre class="code-block">
                     <code>
+<span class="bigger-code-text">::first-letter Pseudo Element</span>
+
 p
 {
     font-size: 18px;
@@ -487,6 +516,9 @@ p::first-letter
                     </pre>
                     <pre class="code-block">
                         <code>
+<span class="bigger-code-text">::before Pseudo Element</span>
+
+
 .character-1::before
 {
     content: "Character 1: " 
@@ -500,7 +532,7 @@ p::first-letter
                     </pre>
                     <section class="description-card">
                         <h3>
-                            ::before Pseudo Elements 
+                            ::before Pseudo Element
                         </h3>
                         <p>
                             The "::before" pseudo element adds content before the element it is suffixed to. 
@@ -514,7 +546,7 @@ p::first-letter
                     </section>
                     <section class="description-card">
                         <h3>
-                            ::selection Pseudo Elements
+                            ::selection Pseudo Element
                         </h3>
                         <p>
                             The "::selection" pseudo element applies styling to an element when a user highlights it using the mouse.
@@ -534,6 +566,9 @@ p::first-letter
                     </section>
                     <pre class="code-block">
                         <code>
+<span class="bigger-code-text">::selection Pseudo Element</span>
+
+
 ::selection
 {
     background-color: yellow;
@@ -549,6 +584,8 @@ div::selection
                     </pre>
                     <pre class="code-block">
                         <code>
+<span class="bigger-code-text">::marker Pseudo Element</span>  
+
 #red-list li::marker
 {
     color: green;
@@ -558,7 +595,7 @@ div::selection
                     </pre>
                     <section class="description-card">
                         <h3>
-                            ::marker Pseudo Elements
+                            ::marker Pseudo Element
                         </h3>
                         <p>
                             The "::marker" pseudo element applies styling to the list item markers of the element to which it is suffixed to.
@@ -618,6 +655,8 @@ div::selection
                     </section>
                     <pre class="code-block">
                         <code>
+<span class="bigger-code-text">[attribute] Selector</span>
+
 a[href]
 {
     color: red;
@@ -628,6 +667,8 @@ a[href]
                     </pre>
                     <pre class="code-block">
                         <code>
+<span class="bigger-code-text">[attribute="value"] Selector</span>
+
 a[href="https://www.bbc.co.uk/sport"]
 {
     color: yellow;
@@ -677,6 +718,8 @@ a[href="https://news.sky.com/uk"]
                     </section>
                     <pre class="code-block">
                         <code>
+<span class="bigger-code-text">[attribute~="value"] Selector</span>
+
 p[title~="important"]
 {
     font-weight: bold;
@@ -686,6 +729,8 @@ p[title~="important"]
                     </pre>
                     <pre class="code-block">
                         <code>
+<span class="bigger-code-text">[attribute|="value"] Selector</span>
+
 p[class|="highlight"]
 {
     background-color: pink;
@@ -716,6 +761,8 @@ p[class|="highlight"]
                     </section>
                     <pre class="code-block">
                         <code>
+<span class="bigger-code-text">[attribute^="value"] Selector</span>
+
 [class^="big"]
 {
     font-weight: bold;
@@ -727,6 +774,8 @@ p[class|="highlight"]
                     </pre>
                     <pre class="code-block">
                         <code>
+<span class="bigger-code-text">[attribute$="value"] Selector</span>
+
 [class$="big"]
 {
     font-weight: bold;
@@ -761,6 +810,8 @@ p[class|="highlight"]
                     </section>
                     <pre class="code-block">
                         <code>
+<span class="bigger-code-text">[attribute*="value"] Selector</span>
+
 p[class*="big"]
 {
     font-weight: bold;
