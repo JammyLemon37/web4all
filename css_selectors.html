@@ -28,6 +28,7 @@
 
         <!-- main body code -->
         <main id="page-top">
+            <h1 class="backup-site-title"><span>W</span>eb<span>4A</span>ll</h1>
             <section class="selector-page-main-wrapper">
                 <h2 class="section-heading">
                     CSS Selectors 
@@ -65,7 +66,7 @@
                         </h3>
                         <p>
                             The element selector targets the exact HTML tag we want our style declarations to apply too. 
-                            In our example to the right here we are targeting all p (paragraph) 
+                            In the example shown here we are targeting all p (paragraph) 
                             tags and telling the browser to center them and render the foreground (text) colour blue.
                         </p>
                         <a class="codespace-button" href="https://onecompiler.com/html/458bcynvq" target="_blank" rel="noopener noreferrer">Try it in a codespace!</a>
@@ -218,7 +219,7 @@ body
                             The universal selector should be employed very carefully as, if used carelessly it can result in unexpected behaviours with regard to styling.
                         </p>
                         <p>
-                            In our example to the left we have the universal selector targeting all elements and applying the foreground colour red to them. 
+                            In the example shown we have the universal selector targeting all elements and applying the foreground colour red to them. 
                             We also have a ruleset for the entire body tag stating that the foreground colour should be blue. Lets now imagine within the body we have a paragraph element. 
                             Normally, unless directly styled otherwise, the paragraph element would inherit the foreground colour blue from it's parent element, the body. 
                             However in this case, the paragraph element would actually appear red. 
@@ -270,7 +271,7 @@ section > p
                         <p>
                             The child combinator is denoted by a '>' character. It is used to target direct child descendants of the left-side element. 
                             A direct child descendant is an element that is within an element tag without being nested in any other element tags first. 
-                            In our example on the left, all p tags directly within section tags are being targeted. 
+                            In the given example, all p tags directly within section tags are being targeted. 
                             Therefore if a p tag was within a div tag that was within a section tag the rule on the left would not apply styling to it. 
                             This may be a little hard to wrap your head around so feel free to use the codespace to help yourself understand this concept a little more. 
                         </p>
@@ -283,7 +284,7 @@ section > p
                         <p>
                             The next sibling combinator is denoted by a '+' character. This targets the element that is the next direct sibling
                             along to the element to the left.
-                            In our example on the right the div tag that is a sibling and directly follows any section tag and share the same parent
+                            In the example shown, the div tag that is a sibling and directly follows any section tag and share the same parent
                             element will have the background colour of blue applied to it.
                         </p>
                         <a class="codespace-button" href="https://onecompiler.com/html/458d6mgft" target="_blank" rel="noopener noreferrer">Try it in a codespace!</a>
@@ -363,7 +364,7 @@ section ~ p
                         </h3>
                         <p>
                             The ":hover" pseudo class applies styling to an element only when it is hovered over by a user.
-                            This is most helpful for styling interactive links and buttons on a webpage. In our example to the right, elements with the corresponding class "big-bold-blue"
+                            This is most helpful for styling interactive links and buttons on a webpage. In the example shown, elements with the corresponding class "big-bold-blue"
                             will become bigger, bolder and blue when hovered over by the user.
                         </p>
                         <a class="codespace-button" href="https://onecompiler.com/html/458db5t58" target="_blank" rel="noopener noreferrer">Try it in a codespace!</a>
@@ -406,7 +407,7 @@ input.blue-button:focus
                         </h3>
                         <p>
                             The ":first-child" pseudo class targets elements which are the first child descendants of their parent element. 
-                            In our example to the right p elements that are the first child within their parent element will appear bold, larger, red and with a blue underline.
+                            In our example, p elements that are the first child within their parent element will appear bold, larger, red and with a blue underline.
                         </p>
                         <a class="codespace-button" href="https://onecompiler.com/html/458dcnu8j" target="_blank" rel="noopener noreferrer">Try it in a codespace!</a>
                     </section>
@@ -464,7 +465,7 @@ p:first-child
                         </h3>
                         <p>
                             The "::first-letter" pseudo element targets the element it is suffixed to and applies styling to just the first letter of the targeted element. 
-                            In the example to the right the first letter of all p elements will appear larger, bold and red.
+                            In the example shown, the first letter of all p elements will appear larger, bold and red.
                         </p>
                         <a class="codespace-button" href="https://onecompiler.com/html/458dcya77" target="_blank" rel="noopener noreferrer">Try it in a codespace!</a>
                     </section>
@@ -506,7 +507,7 @@ p::first-letter
                             The value of the content property within the "selector::before" ruleset is what is added before the element being targeted.
                         </p>
                         <p>
-                            In the example to the left, elements with the class "character-1" will have "Character 1: " inserted before and elements with the class "character-2" will have 
+                            In our example, elements with the class "character-1" will have "Character 1: " inserted before and elements with the class "character-2" will have 
                             "Character 2: " inserted beforehand. 
                         </p>
                         <a class="codespace-button" href="https://onecompiler.com/html/458ddbtz3" target="_blank" rel="noopener noreferrer">Try it in a codespace!</a>
@@ -517,7 +518,7 @@ p::first-letter
                         </h3>
                         <p>
                             The "::selection" pseudo element applies styling to an element when a user highlights it using the mouse.
-                            In the example to the right, "::selection" targets all elements and stipulates that when any element is highlighted the
+                            In the example shown, "::selection" targets all elements and stipulates that when any element is highlighted the
                             background colour turns yellow
                             and the foreground colour turns red.
                         </p>
@@ -561,7 +562,7 @@ div::selection
                         </h3>
                         <p>
                             The "::marker" pseudo element applies styling to the list item markers of the element to which it is suffixed to.
-                            In our example to the left, the list with the id "red-list" will have the markers of its li elements rendered in a large 30 pixel size and in the colour green.
+                            In the given example, the list with the id "red-list" will have the markers of its li elements rendered in a large 30 pixel size and in the colour green.
                         </p>
                         <a class="codespace-button" href="https://onecompiler.com/html/458dgnpe4" target="_blank" rel="noopener noreferrer">Try it in a codespace!</a>
                     </section>
@@ -607,7 +608,7 @@ div::selection
                         </h3>
                         <p>
                             This selector targets all elements that have an instance of the attribute defined within their opening HTML tag. 
-                            In our example to the right, all anchor tags with the href (hyper-text reference) attribute present will be rendered larger, bold and red.
+                            Within our example, all anchor tags with the href (hyper-text reference) attribute present will be rendered larger, bold and red.
                         </p>
                         <p>
                             This example would essentially target all links as they all have a href value in order to direct the user to the correct destination. 
@@ -652,7 +653,7 @@ a[href="https://news.sky.com/uk"]
                             As mentioned above 'i' or 's' can be included right before the closing square bracket to trigger either a case insensitive or case sensitive search.
                         </p>
                         <p>
-                            In the example on the left we see style rules for two anchor tags both with present href attributes. 
+                            In the provided example, we see style rules for two anchor tags both with present href attributes. 
                             However we can see that one selector seems to be matching to a link that takes you to the BBC sport website, and another that takes you to the Sky news website. 
                             Resultantly these 2 links will be styled differently by the browser.
                         </p>
@@ -668,7 +669,7 @@ a[href="https://news.sky.com/uk"]
                             However it will not recognise variations of the word or the word connected by characters such as '-' and '_'. 
                         </p>
                         <p>
-                            For example on the right is code that targets paragraph elements with the title attribute that includes the word "important". 
+                            Within our example, is code that targets paragraph elements with the title attribute that includes the word "important". 
                             Rather ironically a p element with the title "not important" would be targeted 
                             while one with the title "very-important" or "importantest" or "veryveryimportant" would not be targeted.
                         </p>
@@ -698,7 +699,7 @@ p[class|="highlight"]
                         <p>
                             This selector targets elements with the attribute mentioned with a value exactly matching that of the value in the square 
                             brackets or the value within the square brackets immediately followed by a '-'. 
-                            In our example to the left p elements with the class value "highlight" or "highlight-..." will be targeted and styled to appear with a pink background.
+                            In the given example, p elements with the class value "highlight" or "highlight-..." will be targeted and styled to appear with a pink background.
                         </p>
                         <a class="codespace-button" href="https://onecompiler.com/html/458dmv432" target="_blank" rel="noopener noreferrer">Try it in a codespace!</a>
                     </section>
@@ -708,7 +709,7 @@ p[class|="highlight"]
                         </h3>
                         <p>
                             This selector targets elements with the attribute mentioned that has a value that is prefixed by (starts with) the value stipulated within our square brackets. 
-                            For example on the right the code targets all elements that have a class value that begins with "big". 
+                            Within the example shown, the code targets all elements that have a class value that begins with "big". 
                             Resultantly, elements with a class of "big-bold" and "big-blue" will have the stipulated large size font, boldness and underlining applied to them.
                         </p>
                         <a class="codespace-button" href="https://onecompiler.com/html/458dn9jt4" target="_blank" rel="noopener noreferrer">Try it in a codespace!</a>
@@ -742,7 +743,7 @@ p[class|="highlight"]
                         <p>
                             This selector is similar to the one above except that it works in the opposite way. 
                             The selector targets elements with the attribute mentioned that has a value that is suffixed by (ends with) the value stipulated within our square brackets. 
-                            For example on the left the code targets all elements that have a class value that ends with "big". 
+                            Within the example shown, the code targets all elements that have a class value that ends with "big". 
                             Resultantly, elements with a class of "bold-big" and "blue-big" will have the stipulated large size font, boldness and underlining applied to them.
                         </p>
                         <a class="codespace-button" href="https://onecompiler.com/html/458dnncw4" target="_blank" rel="noopener noreferrer">Try it in a codespace!</a>
@@ -754,7 +755,7 @@ p[class|="highlight"]
                         <p>
                             This selector is perhaps the most general and flexible of the last ones that we've seen. The selector targets elements with the attribute and its value mentioned in the square brackets. 
                             The value in square brackets can appear anywhere within the element attribute's text string value making this the most flexible of the partial matching attribute selectors. 
-                            In our example to the right, we are targeting all p elements with a class value that involves the string "big" anywhere within it.
+                            In the given example, we are targeting all p elements with a class value that involves the string "big" anywhere within it.
                         </p>
                         <a class="codespace-button" href="https://onecompiler.com/html/458dnwr7j" target="_blank" rel="noopener noreferrer">Try it in a codespace!</a>
                     </section>

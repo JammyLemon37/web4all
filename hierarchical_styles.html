@@ -30,6 +30,7 @@
 
     <!-- main body content -->
     <main id="page-top">
+        <h1 class="backup-site-title"><span>W</span>eb<span>4A</span>ll</h1>
         <section class="style-page-wrapper">
             <h2 class="section-heading">
                 CSS Style Hierarchy
@@ -85,10 +86,12 @@
                 CSS Specificity
             </h2>
             <section class="horizontal-flex-container">
-                <section class="style-page-description-card-green">
+                <img alt="basic specificity explanation" id="specificity-arrow-img"
+                    src="./images/css_specificity_arrow.webp" />
+                <section id="specificity-order-explanation" class="style-page-description-card-green">
                     <p>
                         The principle of specificity pretty much prioritises how specifically an individual element has
-                        been targeted. The picture on the right illustrates this pretty well.
+                        been targeted. The picture above illustrates this pretty well.
                         The least specific selector however is actually the Universal selector. No specificity priority
                         is applied to this.
                     </p>
@@ -106,8 +109,6 @@
                         hierarchy and will overrule most other CSS rules unless those rules are suffixed with "!important".
                     </p>
                 </section>
-                <img alt="basic specificity explanation" id="specificity-arrow-img"
-                    src="./images/css_specificity_arrow.webp" />
             </section>
             <img id="css-specificity-table-pic" alt="specificity weight table"
                 src="./images/css_specificity_table.jpg" />

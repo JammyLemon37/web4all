@@ -124,6 +124,8 @@ header
     height: 100%;
     margin: 0px;
     padding: 0px 10px;
+    text-align: center;
+    font-weight: bold;
 }
 
 .navbar-menu li a:visited
@@ -730,6 +732,7 @@ header
     width: 35%;
     height: auto;
     align-self: center;
+    margin-bottom: 15px;
 }
 
 .style-page-wrapper hr
@@ -894,11 +897,12 @@ header
   .navbar-menu
   {
     width: 100%;
+    padding: 0px;
   }
 
   .navbar-menu li a
   {
-    font-size: 2vw;
+    font-size: 2.5vw;
   }
 
   .backup-site-title
@@ -967,8 +971,7 @@ header
     .style-page-wrapper, .selector-page-main-wrapper
     {
         width: 100%;
-    }
-
+    } 
 }
 
 /* Media queries targetting smaller (smartphone) devices */
