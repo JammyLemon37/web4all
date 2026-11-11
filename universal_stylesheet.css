@@ -15,7 +15,7 @@ body
 
 body *
 {
-    /* border: 1px solid red; */
+    border: 1px solid red;
 }
 
 /* global variables */
@@ -147,6 +147,22 @@ header
 .navbar-menu li:hover a
 {
     color: red;
+}
+
+.backup-site-title
+{
+    font-size: 2.5rem;
+    font-family: "Rockwell", serif;
+    padding-right: 40px;
+    margin: 15px auto;
+    text-align: center;
+    display: none;
+}
+
+.backup-site-title span
+{
+    font-weight: 800;
+    font-size: 1.2em;
 }
 
 /* footer ruleset */
@@ -344,6 +360,7 @@ header
     flex-direction: row;
     justify-content: space-around; 
     overflow: auto;
+    flex-wrap: wrap;
 }
 
 .language
@@ -614,7 +631,7 @@ header
     display: flex;
     width: 100%;
     justify-content: space-around;
-    align-items: stretch;
+    flex-wrap: wrap;
 }
 
 .style-page-description-card-white
@@ -663,7 +680,7 @@ header
 
 .style-page-description-card-green
 {
-    width: 25%;
+    max-width: 25%;
     display: inline-flex;
     flex-direction: column;
     justify-content: start;
@@ -739,6 +756,18 @@ header
 .break
 {
     display: block;
+}
+
+.flex-direction-column-override
+{
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+}
+
+#specificity-order-explanation
+{
+    width: 75%;
 }
 
 /* SEPARATING_HTML_AND_CSS_CONTENT.HTML */
@@ -837,13 +866,98 @@ header
     list-style-type: none;
 }
 
-/* media queries for index.html */
+/* MEDIA QUERIES */
 
-@media only screen and (max-width: 880px)
+/* Media queries targetting larger (tablet) devices */
+@media only screen and (max-width: 850px)
 {
+
+    main
+    {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    /* responsive design media queries for nav and footer */
   .navbar-container-right
   {
-    display: flex;
-  }  
+    display: none;
+  }
+  
+  :root
+  {
+    --nav-footer-height: 110px;
+  }
+
+  .navbar-container
+  {
+    justify-content: center;
+  }
+
+  .navbar-menu
+  {
+    width: 100%;
+  }
+
+  .navbar-menu li a
+  {
+    font-size: 2vw;
+  }
+
+  .backup-site-title
+  {
+    display: block;
+  }
+
+  /* responsive design for index.html */
+  .language
+  {
+    margin-top: 20px;
+  }
+
+  .three-layer-model-grid-container
+  {
+    grid-template: repeat(4, auto) / 75%;
+    column-gap: 0px;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  .three-layer-model-grid-container img
+  {
+    height: 200px;
+    margin: 0 auto;
+    width: auto;
+  }
+
+  #three-layer-definition
+  {
+    padding: 0px 15px;
+  }
+
+  /* responsive design media queries for separating_html_and_css_content.html */
+
+    .description-grid
+    {
+        grid-template-columns: 100%;
+    }
+
+    /* responsive design media queries for references.html */
+
+    .reference-page-description-card-green
+    {
+        width: 100%;
+    }
+
+}
+
+/* Media queries targetting smaller (smartphone) devices */
+@media only screen and (max-width: 400px)
+{
+    #language-container
+    {
+        width: 100vw;
+        margin: 0 auto;
+    }
 }
 
