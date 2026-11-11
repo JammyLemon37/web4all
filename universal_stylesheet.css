@@ -680,7 +680,7 @@ header
 
 .style-page-description-card-green
 {
-    max-width: 25%;
+    width: 25%;
     display: inline-flex;
     flex-direction: column;
     justify-content: start;
@@ -867,9 +867,11 @@ header
 }
 
 /* MEDIA QUERIES */
+/* NB: some media queries work across pages not just on one. /*
+/* The comments segrating media queries affecting certain pages is indicative not definitive! */
 
 /* Media queries targetting larger (tablet) devices */
-@media only screen and (max-width: 850px)
+@media only screen and (max-width: 900px)
 {
 
     main
@@ -949,6 +951,29 @@ header
         width: 100%;
     }
 
+    /* responsive design media queries for hierarchical_styles.html */
+    .style-page-description-card-green
+    {
+        width: 80%;
+    }
+
+    .style-page-description-card-white
+    {
+        width: 80%;
+    }
+
+    /* responsive design queries for css_selectors.html */
+
+    .description-grid
+    {
+        width: 100%;
+    }
+
+    .style-page-wrapper, .selector-page-main-wrapper
+    {
+        width: 100%;
+    }
+
 }
 
 /* Media queries targetting smaller (smartphone) devices */
@@ -958,6 +983,16 @@ header
     {
         width: 100vw;
         margin: 0 auto;
+    }
+
+    .description-card
+    {
+        width: 100%;
+    }
+
+    .code-block
+    {
+        width: 100%
     }
 }
 
