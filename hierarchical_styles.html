@@ -52,7 +52,7 @@
                     <p>
                         Specificity, within CSS, is one of the factors that the cascade algorithm uses to
                         decide which style rule to apply to a property when multiple
-                        of the same are competing with one another.
+                        of the same type are competing with one another.
                         Resultantly this greatly influences the overall effect of CSS depending on the HTML structure of
                         the document.
                     </p>
@@ -73,7 +73,7 @@
                         Cascade
                     </h3>
                     <p>
-                        This makes up the 'C' in CSS! The cascade is the that algorithm decides how to go about finding the
+                        This makes up the 'C' in CSS! The cascade is the algorithm that decides how to go about finding the
                         exact style rule that should be applied to each HTML element within a document.
                         The cascade algorithm follows a few steps which we'll explore a little further down below.
                     </p>
@@ -113,7 +113,7 @@
             <img id="css-specificity-table-pic" alt="specificity weight table"
                 src="./images/css_specificity_table.jpg" />
             <p class="main-para-text">
-                CSS specificity can actual be boiled down to numbers. The specificity weight notation is presented in the form "X-Y-Z".
+                CSS specificity can actually be boiled down to numbers. The specificity weight notation is presented in the form "X-Y-Z".
                 X represents the number of ID selectors, Y represents the number of pseudo classes,
                 class and attribute selectors and Z represents the number of pseudo element and element selectors.
                 The selector that has the highest number in the left-most column of the "X-Y-Z" weight notation takes
@@ -212,7 +212,7 @@ div
                         elements. This sets the
                         font to 25px size and the background colour to yellow. everything with the class "bold-blue"
                         will have the relevant
-                        style rules applied. All div elements will also have all of it's relevant style rules applied
+                        style rules applied. All div elements will also have all of its relevant style rules applied
                         unless targeted by a
                         ruleset of higher specificity, such as the class selector above.
                     </p>
@@ -267,7 +267,7 @@ div
                         from our example above,
                         what is likely to happen if we were to place a p element within a div or a h3 element. The p element
                         will inherit the style of
-                        it's parent element as it has no style rules here that have been written for it. However what
+                        its parent element as it has no style rules here that have been written for it. However what
                         would happen if the p
                         element was just placed on its own within the document, not within any other element?
                     </p>
@@ -304,7 +304,7 @@ div
                     <p>
                         This refers to the origin of where styles come from and what their level of importance is.
                         "!important" can be added to
-                        the end of any CSS declaration in order to increase it's level of importance over other rules
+                        the end of any CSS declaration in order to increase its level of importance over other rules
                         that may take precedence
                         in the cascade order due to higher specificity or other factors.
                     </p>
