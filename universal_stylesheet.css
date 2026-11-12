@@ -477,6 +477,11 @@ header
     font-size: 18px;
 }
 
+#basic-css-syntax
+{
+    margin: 0 auto;
+}
+
 #basic-css-syntax-pic img
 {
     margin-top: 15px;
@@ -1008,6 +1013,12 @@ header
     {
         width: 100%;
     } 
+
+    #basic-css-syntax-pic
+    {
+        display: flex;
+        justify-content: center;
+    }
 
     #basic-css-syntax-pic img
     {
