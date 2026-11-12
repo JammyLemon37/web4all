@@ -165,7 +165,7 @@ p
                         </h3>
                         <p>
                             We can actually expand on simply just selecting an element based on the value of its class attribute. 
-                            In the example to the left we see that by separating the values within the value of the relavant element's class attribute 
+                            In the example to the left we see that by separating the values within the value of the relevant element's class attribute 
                             with a space will allow us to apply the styling rules of multiple classes to the same element. 
                         </p>
                         <p>
@@ -234,9 +234,9 @@ body
                         <p>
                             In the example shown, we have the universal selector targeting all elements and applying the foreground colour red to them. 
                             We also have a ruleset for the entire body tag stating that the foreground colour should be blue. Lets now imagine within the body we have a paragraph element. 
-                            Normally, unless directly styled otherwise, the paragraph element would inherit the foreground colour blue from it's parent element, the body. 
+                            Normally, unless directly styled otherwise, the paragraph element would inherit the foreground colour blue from its parent element, the body. 
                             However in this case, the paragraph element would actually appear red. 
-                            This is because the universal selector is directly targeting the paragraph element and therefore overrides the principle of inherited styles from it's parent element.
+                            This is because the universal selector is directly targeting the paragraph element and therefore overrides the principle of inherited styles from its parent element.
                         </p>
                         <a class="codespace-button" href="https://onecompiler.com/html/458bf9g68" target="_blank" rel="noopener noreferrer">Try it in a codespace!</a>
                     </section>
@@ -354,11 +354,11 @@ section ~ p
                             Interactive Pseudo Classes
                         </h3>
                         <p>
-                            Interactive pseudo classes apply styling to an element based upon how a user interracts with the element on the webpage.
+                            Interactive pseudo classes apply styling to an element based upon how a user interacts with the element on the webpage.
                         </p>
                         <ul>
                             <li><span class="inline-important">:hover</span> - Targets an element when a user hovers over it</li>
-                            <li><span class="inline-important">:focus</span> - Targets an element when a user selects it with their mouse or keyboard</li>
+                            <li><span class="inline-important">:focus</span> - Targets an element when a user selects it (normally with the tab key)</li>
                             <li><span class="inline-important">:active</span> - Styles an interactive element when a user is in the process of clicking it. 
                                 This element is most effective when the style ruleset is written <span class="inline-important">after</span> the corresponding ":hover" ruleset
                             </li>
@@ -374,7 +374,7 @@ section ~ p
                             Structural pseudo classes target elements based upon their position within the document relative to the element that the pseudo class is being applied to.
                         </p>
                         <ul>
-                            <li><span class="inline-important">:first-child</span> - Targets the element prefixed to ":first-child" that is the first child descendant of another element.</li>
+                            <li><span class="inline-important">:first-child</span> - Targets the element prefixed to ":first-child" if it is the first child descendant of its parent element.</li>
                             <li><span class="inline-important">:nth-child(n)</span> - Targets the element prefixed to ":nth-child(n)" that is the nth child descendant of another element.</li>
                             <li><span class="inline-important">:last-child</span> - Targets the element prefixed to ":last-child" that is the last child descendant of another element.</li>
                         </ul>
@@ -419,7 +419,7 @@ input.blue-button:focus
                         </h3>
                         <p>
                             The ":focus" pseudo class is used to apply styling to an element when it comes under focus. 
-                            An element comes under focus when a user clicks on it using their mouse or navigates to it using their keyboard (usually the tab key). 
+                            An element comes under focus when a user highlights using their keyboard (usually the tab key). 
                             Having styling applied when interactive elements become focussed is a good way to make your website more inclusive and accessible. 
                             This is because some people are unable to use a mouse and therefore rely on keyboards to navigate websites. 
                             Applying some highlighting and bold colours will allow these users to navigate your site more easily and ensure a better experience for them.
@@ -608,8 +608,8 @@ div::selection
                     Attribute Selectors
                 </h2>
                 <p class="main-para-text">
-                    Attribute selectors target an element based on the value and/or presence of a specific attribute that's defined within it's HTML tag. 
-                    The attribute, and possibly it's value too, is enclosed in square brackets following the name of the element it is targeting. 
+                    Attribute selectors target an element based on the value and/or presence of a specific attribute that's defined within its HTML tag. 
+                    The attribute, and possibly its value too, is enclosed in square brackets following the name of the element it is targeting. 
                     The character 'i' can be included right before the closing square bracket in order to match attribute values in a non-case sensitive way. 
                     Conversely, 's' can be added before the closing square bracket to ensure case sensitive functionality.
                 </p>

@@ -50,8 +50,9 @@
                         Specificity
                     </h3>
                     <p>
-                        Specificity, within CSS, is the principle that decides which style rules take precedence
-                        over other style rules.
+                        Specificity, within CSS, is one of the factors that the cascade algorithm uses to
+                        decide which style rule to apply to a property when multiple
+                        of the same are competing with one another.
                         Resultantly this greatly influences the overall effect of CSS depending on the HTML structure of
                         the document.
                     </p>
@@ -64,8 +65,7 @@
                         If an element has had no style rules explicitly written for it, they can inherit style rules
                         from their parent element.
                         In the case that there are no style declarations written for any elements at all on a webpage,
-                        then the browser's default styles are applied
-                        (in other words inherited!). However not all CSS style properties are inherited by default. 
+                        then the browser's default styles are applied. However not all CSS style properties are inherited by default. 
                     </p>
                 </section>
                 <section class="style-page-description-card-white">
@@ -272,14 +272,13 @@ div
                         element was just placed on its own within the document, not within any other element?
                     </p>
                     <p>
-                        Well firstly, all elements that
-                        are displayed on the screen have "body" as the parent element so any styles overarchingly being
+                        Well firstly, most elements that
+                        are displayed on the screen will have "body" as the ancestral (non-direct) parent element so any styles overarchingly being
                         applied to the body will
                         be inherited. Here however we have no style rules that have been written for the body element.
                         Resultantly the p element
-                        will still be displayed on the screen however it will inherit the default styles that have been
-                        written for the browser
-                        which the webpage is being viewed in.
+                        will still be displayed on the screen however it will be rendered with the default styles that have been
+                        written for the browser which the webpage is being viewed in.
                     </p>
                     <a class="codespace-button" href="https://onecompiler.com/html/458knsaec" target="_blank" rel="noopener noreferrer">Try it in a codespace!</a>
                 </section>

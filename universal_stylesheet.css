@@ -811,6 +811,37 @@ header
 /* REFERENCES.HTML */
 /* style rules for references.html */
 
+#reference-page-banner
+{
+    background-image: url("./images/reference_page_banner.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 250px;
+    width: 100%;
+    margin: 30px auto 30px auto;
+    z-index: -2;
+    position: relative;
+}
+
+#reference-page-banner h2
+{
+    display: inline;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    z-index: 5;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 35px;
+    padding: 10px;
+    font-family: var(--main-text-font);
+    margin: 0px;
+    text-align: center;
+}
+
 .reference-page-wrapper
 {
     display: flex;
