@@ -477,7 +477,7 @@ header
     font-size: 18px;
 }
 
-#basic-css-syntax-pic
+#basic-css-syntax-pic img
 {
     margin-top: 15px;
 }
@@ -1008,6 +1008,12 @@ header
     {
         width: 100%;
     } 
+
+    #basic-css-syntax-pic img
+    {
+        margin: 15px auto 0px auto;
+        width: 80%;
+    }
 }
 
 /* Media queries targetting smaller (smartphone) devices */
