@@ -924,10 +924,10 @@ header
   {
     display: none;
   }
-  
-  :root
+
+  .page-footer
   {
-    --nav-footer-height: 110px;
+    height: 110px;
   }
 
   .navbar-container
